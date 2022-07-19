@@ -243,14 +243,14 @@ function esVocal(letra){
 //Escribe tu código aquí
   if (typeof letra === "string" && letra.length === 1) {
     if (letra.match(/[aeiou]/i)) {
-      console.info("Es vocal");
+      // console.info("Es vocal");
       return "Es vocal";
     } else {
-      console.error("Dato incorrecto");
+      // console.error("Dato incorrecto");
       return "Dato incorrecto";
     }
   } else {
-    console.info("Dato incorrecto");
+    // console.info("Dato incorrecto");
     return "Dato incorrecto";
   }  
 }
