@@ -35,9 +35,9 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
-  if (status = 1) {
+  if (status === 1) {
     return "Online";
-  } else if (status = 2) {
+  } else if (status === 2) {
     return "Away";
   } else {
     return "Offline";
@@ -76,7 +76,7 @@ function colors(color) {
 //En caso que el color recibido sea "orange", devuleve --> "This is orange"
 //Caso default: devuelve --> "Color not found"
 //Usar el statement Switch.
-  switch (color.toLowerCase()) {
+  switch (color) {
     case "blue":
       return "This is blue";
       break;
@@ -177,17 +177,14 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-
-  for (var i = 2; i < numero; i++) {
-
-    if (numero % i == 0) {
-      return false;
-    } else {
-      return true;
-    }
-  }
+   if (numero == 0 || numero == 1 || numero == 4) return false;
+   for (let x = 2; x < numero / 2; x++) {
+     if (numero % x == 0) return false;
+   }
+   // Si no se pudo dividir por ninguno de los de arriba, sí es primo
+   return true;
 }
-
+ 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
@@ -207,7 +204,7 @@ function tablaDelSeis(){
   //Escribe tu código aquí   
   const num = 6;
   const tabla = []
-  for (var i = 1; i <= 60; i++) {
+  for (var i = 0; i <= 10; i++) {
     let x = num * i;
     let tablaM = tabla.push(x);
   }
@@ -239,7 +236,7 @@ function doWhile(numero) {
   do {
     numero = numero + 5;
     contador++;
-  } while (contador <= 8);
+  } while (contador < 8);
   return numero;
 }
 
