@@ -206,7 +206,7 @@ function tablaDelSeis(){
   const tabla = []
   for (var i = 0; i <= 10; i++) {
     let x = num * i;
-    let tablaM = tabla.push(x);
+    tabla.push(x);
   }
   return tabla;
 }
